@@ -1,0 +1,58 @@
+Le dossier est organisé de la façon suivante :
+- logs : dossier contenant le suivi de chaque Entraînement (contient mes logs)
+- opt : dossier dans lequel sont sauvegardés les modèles issus de l'entraînement par Optuna (vide initialement)
+- PBIA_Env : Environnement utilisé
+- roms : dossier contenant la rom Street Fighter 2 
+- save : dossier contenant les sauvegardes "intéressantes" de mes modèles 
+- train : dossier où on sauvegarde grâce à la CallBack nos modèles (vide initialement)
+
+On retrouve ensuite différents fichier .ipynb par rapport à :
+- LunarLander
+- Breakout
+- Street Fighter 2
+
+Pour LunarLander, on a:
+
+LunarLander_RA.ipynb qui joue avec des actions aléatoires
+LunarLander_PPO.ipynb qui s'occupe de l'entrainement (durée de l'entraînement 30 min)
+LunarLander_PPO_test.ipynb qui permet de tester le modèle sur le jeu
+
+Pour Breakout, on a :
+Breakout_RA.ipynb qui joue avec des actions aléatoires
+Breakout_PPO_FT.ipynb qui s'occupe du premier entraînement
+Breakout_PPO_CT.ipynb qui permet de continuer l'entraînement d'un modèle choisit
+Breakout_PPO_test.ipynb qui permet de tester le modèle sur le jeu
+
+Pour StreetFighter2, on a la même construction que pour Breakout.
+
+
+Comment installer l'environnement ?
+
+Version de Python utilisée : 3.7
+
+Sur Linux, si vous avez l'environnement PBIA_Env :
+
+source PBIA_Env/bin/activate
+
+Sur Linux, si vous n'avez pas l'environnement PBIA_Env :
+
+python3.7 -m venv MyEnv
+source MyEnv/bin/activate
+pip install -r requirements.txt
+python -m ipykernel install --user --name=MyEnv --display-name "MyEnv"
+
+Vous aurez ainsi accès à l'environnement depuis jupyter notebook
+
+
+Comment installer la rom ?
+
+Dans le dossier avec les roms et dans l'environnement :
+
+python -m retro.import .
+
+
+Comment regarder les logs ?
+
+Il faut tensorboard et dans le dossier logs :
+
+tensorboard --logdir=.
