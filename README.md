@@ -1,4 +1,4 @@
-# Algoirthme PPO appliqué sur des jeux
+# Algorithme PPO appliqué sur des jeux
 
 Ce projet a pour objectif d'appliquer l'**algorithme PPO (Proximal Policy Optimization)** (OpenAI, 2017) à différents jeux classiques afin d'explorer l'apprentissage par renforcement. Les jeux sélectionnés sont : 
 
